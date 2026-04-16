@@ -1,0 +1,149 @@
+HTTP/1.1 302 Found
+Date: Fri, 10 Apr 2026 14:06:17 GMT
+Server: Apache/2.4.25 (Debian)
+Set-Cookie: PHPSESSID=g214ii8952ubdup4is6eirup77; path=/
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate
+Pragma: no-cache
+Set-Cookie: PHPSESSID=g214ii8952ubdup4is6eirup77; path=/
+Set-Cookie: security=low
+Location: ../../login.php
+Content-Length: 0
+Content-Type: text/html; charset=UTF-8
+
+curl: (3) URL rejected: Malformed input to a URL function
+curl: (3) URL rejected: Malformed input to a URL function
+carlos@admin:~ % curl -i "http://127.0.0.1/vulnerabilities/brute/?username=admin&password=password&Login=Login" \
+  -H "Cookie: PHPSESSID=TU_SESION; security=low"
+HTTP/1.1 302 Found
+Date: Fri, 10 Apr 2026 14:07:03 GMT
+Server: Apache/2.4.25 (Debian)
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate
+Pragma: no-cache
+Location: ../../login.php
+Content-Length: 0
+Content-Type: text/html; charset=UTF-8
+
+carlos@admin:~ % curl -i "http://127.0.0.1/vulnerabilities/brute/?username=admin&password=password&Login=Login" \
+  -H "Cookie: PHPSESSID=ul835bd0etd4toohkhagbev3f0; security=low"
+HTTP/1.1 200 OK
+Date: Fri, 10 Apr 2026 14:07:53 GMT
+Server: Apache/2.4.25 (Debian)
+Expires: Tue, 23 Jun 2009 12:00:00 GMT
+Cache-Control: no-cache, must-revalidate
+Pragma: no-cache
+Vary: Accept-Encoding
+Content-Length: 4414
+Content-Type: text/html;charset=utf-8
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+		<title>Vulnerability: Brute Force :: Damn Vulnerable Web Application (DVWA) v1.10 *Development*<            /title>
+
+		<link rel="stylesheet" type="text/css" href="../../dvwa/css/main.css" />
+
+		<link rel="icon" type="\image/ico" href="../../favicon.ico" />
+
+		<script type="text/javascript" src="../../dvwa/js/dvwaPage.js"></script>
+
+	</head>
+
+	<body class="home">
+		<div id="container">
+
+			<div id="header">
+
+				<img src="../../dvwa/images/logo.png" alt="Damn Vulnerable Web App                          lication" />
+
+			</div>
+
+			<div id="main_menu">
+
+				<div id="main_menu_padded">
+				<ul class="menuBlocks"><li class=""><a href="../../.">Home</a></li                          >
+<li class=""><a href="../../instructions.php">Instructions</a></li>
+<li class=""><a href="../../setup.php">Setup / Reset DB</a></li>
+</ul><ul class="menuBlocks"><li class="selected"><a href="../../vulnerabilities/brute/">Brute Force</a></li>
+<li class=""><a href="../../vulnerabilities/exec/">Command Injection</a></li>
+<li class=""><a href="../../vulnerabilities/csrf/">CSRF</a></li>
+<li class=""><a href="../../vulnerabilities/fi/.?page=include.php">File Inclusion</a></li>
+<li class=""><a href="../../vulnerabilities/upload/">File Upload</a></li>
+<li class=""><a href="../../vulnerabilities/captcha/">Insecure CAPTCHA</a></li>
+<li class=""><a href="../../vulnerabilities/sqli/">SQL Injection</a></li>
+<li class=""><a href="../../vulnerabilities/sqli_blind/">SQL Injection (Blind)</a></li>
+<li class=""><a href="../../vulnerabilities/weak_id/">Weak Session IDs</a></li>
+<li class=""><a href="../../vulnerabilities/xss_d/">XSS (DOM)</a></li>
+<li class=""><a href="../../vulnerabilities/xss_r/">XSS (Reflected)</a></li>
+<li class=""><a href="../../vulnerabilities/xss_s/">XSS (Stored)</a></li>
+<li class=""><a href="../../vulnerabilities/csp/">CSP Bypass</a></li>
+<li class=""><a href="../../vulnerabilities/javascript/">JavaScript</a></li>
+</ul><ul class="menuBlocks"><li class=""><a href="../../security.php">DVWA Security</a></li>
+<li class=""><a href="../../phpinfo.php">PHP Info</a></li>
+<li class=""><a href="../../about.php">About</a></li>
+</ul><ul class="menuBlocks"><li class=""><a href="../../logout.php">Logout</a></li>
+</ul>
+				</div>
+
+			</div>
+
+			<div id="main_body">
+
+				
+<div class="body_padded">
+	<h1>Vulnerability: Brute Force</h1>
+
+	<div class="vulnerable_code_area">
+		<h2>Login</h2>
+
+		<form action="#" method="GET">
+			Username:<br />
+			<input type="text" name="username"><br />
+			Password:<br />
+			<input type="password" AUTOCOMPLETE="off" name="password"><br />
+			<br />
+			<input type="submit" value="Login" name="Login">
+
+		</form>
+		<p>Welcome to the password protected area admin</p><img src="/hackable/users/admin.jpg" />
+	</div>
+
+	<h2>More Information</h2>
+	<ul>
+		<li><a href="https://www.owasp.org/index.php/Testing_for_Brute_Force_(OWASP-AT-004)" target="_bl            ank">https://www.owasp.org/index.php/Testing_for_Brute_Force_(OWASP-AT-004)</a></li>
+		<li><a href="http://www.symantec.com/connect/articles/password-crackers-ensuring-security-your-p            assword" target="_blank">http://www.symantec.com/connect/articles/password-crackers-ensuring-security-your-password</a></li>
+		<li><a href="http://www.sillychicken.co.nz/Security/how-to-brute-force-http-forms-in-windows.htm            l" target="_blank">http://www.sillychicken.co.nz/Security/how-to-brute-force-http-forms-in-windows.html</a></li>
+	</ul>
+</div>
+
+				<br /><br />
+				
+
+			</div>
+
+			<div class="clear">
+			</div>
+
+			<div id="system_info">
+				<input type="button" value="View Help" class="popup_button" id='he                          lp_button' data-help-url='../../vulnerabilities/view_help.php?id=brute&security=low' )"> <input type="button" value="View Source" class="popup_button" id='source_button' data-source-url='../../vulnerabilities/view_source.php?id=brute&security=low' )"> <div align="left"><em>Username:</em> admin <br /><em>Security Level:</em> low<br /><em>PHPIDS:</em> disabled</div>
+			</div>
+
+			<div id="footer">
+
+				<p>Damn Vulnerable Web Application (DVWA) v1.10 *Development*</p>
+				<script src='/dvwa/js/add_event_listeners.js'></script>
+
+			</div>
+
+		</div>
+
+	</body>
+
+</html>%
+

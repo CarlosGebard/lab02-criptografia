@@ -1,0 +1,6 @@
+services:
+  dvwa:
+    image: vulnerables/web-dvwa:latest
+    container_name: dvwa-lab
+    network_mode: host
+    restart: unless-stopped

